@@ -1,8 +1,56 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+
+# Toddlers Learn and Grow
+
+A fun and educational **React Native**(https://reactnative.dev) app for toddlers to **learn colors** with interactive gameplay, & **Text-to-Speech feedback**. Built using **TypeScript**, **Redux Toolkit**, and **Context API** for state management. Its bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).  
+
+## 📱 Features
+
+- **3-Color Learning Game** – Toddlers tap the correct color from multiple choices.  
+- **Text-to-Speech Feedback** – Pronounces colors and gives feedback: correct/wrong.  
+- **Horizontal Scrollable Color Row** – Easy for toddlers to swipe and select colors.  
+- **Vertical Scrollable Page** – Adaptive layout for multiple screens.  
+- **Safe Area Support** – Works on devices with notches or punch-hole cameras.  
+- **TypeScript** – Fully typed code for maintainability.  
+- **Redux Toolkit + Context API** – Efficient state management.  
+
+---
+
+## 🎨 Screenshots
+
+![screenshot](screenshots/Screenshot-Home.png)
+
+---
+
+## 🛠 Tech Stack
+
+- **React Native** (Fabric compatible)  
+- **TypeScript**  
+- **Redux Toolkit**  
+- **Context API**  
+- **react-native-tts** for voice feedback  
+
+---
 
 # Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+
+### Prerequisites
+
+- Node.js >= 22.11.0  
+- npm or yarn  
+- React Native CLI  
+- Android Studio / Xcode (for building on devices/emulators)  
+
+---
+
+### Installation
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/rakeshparveen5/ToddlersLearnAndGrow.git
+cd ToddlersLearnAndGrow
 
 ## Step 1: Start Metro
 
@@ -11,11 +59,9 @@ First, you will need to run **Metro**, the JavaScript build tool for React Nativ
 To start the Metro dev server, run the following command from the root of your React Native project:
 
 ```sh
-# Using npm
-npm start
+# Using npx
+npx react-native start
 
-# OR using Yarn
-yarn start
 ```
 
 ## Step 2: Build and run your app
@@ -25,11 +71,9 @@ With Metro running, open a new terminal window/pane from the root of your React 
 ### Android
 
 ```sh
-# Using npm
-npm run android
+# Using npx
+npx react-native run-android
 
-# OR using Yarn
-yarn android
 ```
 
 ### iOS
@@ -51,11 +95,9 @@ bundle exec pod install
 For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
 
 ```sh
-# Using npm
-npm run ios
+# Using npx
+npm react-native run-ios
 
-# OR using Yarn
-yarn ios
 ```
 
 If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
@@ -74,13 +116,6 @@ When you want to forcefully reload, for example to reset the state of your app, 
 - **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
 ## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
 
 # Troubleshooting
 
