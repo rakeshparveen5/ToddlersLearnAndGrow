@@ -7,8 +7,15 @@ import { Provider } from 'react-redux';
 import { store } from './src/store/store';
 import { AppProvider } from './src/context/AppContext';
 import ColorGameScreen from './src/features/colorGame/screens/ColorGameScreen';
+import { useEffect } from 'react';
+import { initTTS } from './src/utils/tts';
 
 function App() {
+  useEffect(() => {
+    // Initialize TTS when the app starts
+    initTTS();
+  }, []);
+
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
