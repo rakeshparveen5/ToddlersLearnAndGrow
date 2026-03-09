@@ -16,6 +16,15 @@ export const initTTS = async () => {
     }
 };
 
+export const speak = (text: string) => {
+    if (!ttsReady) {
+        console.log("TTS not ready yet");
+        return;
+    }
+    Tts.stop();
+    Tts.speak(text);
+};
+
 export const speakCorrect = (color: string) => {
     if (!ttsReady) {
         console.log("TTS not ready yet");

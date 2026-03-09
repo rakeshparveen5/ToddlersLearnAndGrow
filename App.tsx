@@ -1,4 +1,4 @@
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { ActivityIndicator, StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
@@ -7,13 +7,24 @@ import { Provider } from 'react-redux';
 import { store } from './src/store/store';
 import { AppProvider } from './src/context/AppContext';
 import ColorGameScreen from './src/features/colorGame/screens/ColorGameScreen';
-import { useEffect } from 'react';
-import { initTTS } from './src/utils/tts';
+import { useEffect, useState } from 'react';
+import { initTTS, speak } from './src/utils/tts';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     // Initialize TTS when the app starts
-    initTTS();
+    const startApp = async () => {
+      await initTTS();
+
+      setTimeout(() => {
+        speak("Find the color");
+        setLoading(false);
+      }, 500);
+    };
+
+    startApp();
   }, []);
 
   const isDarkMode = useColorScheme() === 'dark';
@@ -23,10 +34,18 @@ function App() {
       <AppProvider>
         <SafeAreaProvider>
           <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-          <AppContent />
+          {loading ? (<LoadingScreen />) : (<AppContent />)}
         </SafeAreaProvider>
       </AppProvider>
     </Provider>
+  );
+}
+
+function LoadingScreen() {
+  return (
+    <View style={styles.loaderContainer}>
+      <ActivityIndicator size="large" color="#0000ff" />
+    </View>
   );
 }
 
@@ -43,6 +62,12 @@ function AppContent() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  loaderContainer: {
+    backgroundColor: "#e9f6fb",
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
