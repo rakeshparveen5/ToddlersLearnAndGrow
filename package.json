@@ -1,5 +1,5 @@
 {
-  "name": "ToddlersLearnAndGrow",
+  "name": "toddlers_learn_and_grow",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,10 +12,12 @@
   "dependencies": {
     "@react-native/new-app-screen": "0.84.1",
     "@reduxjs/toolkit": "^2.11.2",
+    "patch-package": "^8.0.1",
+    "postinstall-postinstall": "^2.1.0",
     "react": "19.2.3",
     "react-native": "0.84.1",
-    "react-native-google-mobile-ads": "^16.2.1",
     "react-native-safe-area-context": "^5.5.2",
+    "react-native-tts": "^4.1.1",
     "react-redux": "^9.2.0"
   },
   "devDependencies": {
